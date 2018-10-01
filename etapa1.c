@@ -29,8 +29,18 @@ int main(){
 		exit(1);
 	  }
 	  else if (child[i] == 0){
-		printf ("My pid is (%d)\n", getpid ());
-		sleep(5);
+		int pid = getpid();
+		child[i] = pid;
+
+		int j;
+		//j<100
+		for (j=0; j<1; j++){
+			printf ("Número: %d, PID: %d, Paço: %d\n", getChildIndex(pid), pid, j);
+			// aguarda um tempo aleatório (variando  entre  5  e  100  ms)  
+			// apresentar o tempo aleatório na tela
+			// cronometrar/calcular o tempo gasto médio de execução da rotina, e o desvio padrão.
+		}
+
 		exit(0);
 	  }
 	  else if (child[i] > 0){
@@ -44,6 +54,7 @@ int main(){
         printf("Filho %d, pid %d, terminou.\n", getChildIndex(pid), pid);
 	}
 	printf("Todos os  filhos terminaram. Processamento teve a duração de Z ms\n");
+	// calcular duração Z
 
 
 	return 0;
