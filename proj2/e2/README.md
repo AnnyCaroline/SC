@@ -22,5 +22,8 @@ Este programa usa como base o programa da etapa 1. As seções relativas a esta 
         > Ao executar uma rotina, isto é, ao executar uma iteração do loop de 100 paços, um número entre 5 e 100 é sorteado (isso foi tratado na etapa 1). Esse número foi utilizado nessa etapa como o tempo, em ms, para as dormidas citadas acima.
 
 ## Compilação
-Make
+```
+ $ make
+```
+
 

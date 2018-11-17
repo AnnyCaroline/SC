@@ -182,12 +182,12 @@ int main(){
 	int var2 = array[1];
 
 	// E2 - DETACH (DESACOPLAMENTO) NA MEMÓRIA COMPARTILHADA
-	if (shmdt(array) < 0){
+	if (shmdt(array) == -1){
 		perror("Erro no detach\n");
 	};
 
 	// E2 - LIBERAR A MEMÓRIA COMPARTILHADA - IPC_RMID indica uma operação de remoção
-	if (shmctl(shmid, IPC_RMID, NULL) < 0){
+	if (shmctl(shmid, IPC_RMID, NULL) == -1){
 		perror("Erro ao liberar o segmento de memória compartilhada\n");
 	}
 
