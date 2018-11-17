@@ -44,6 +44,7 @@ int main(){
         else if (child[i] == 0){
             Timer tchild;
 		    int pid = getpid();
+			child[i] = pid;
 
 		    srand(pid * (time(NULL)/100));
 

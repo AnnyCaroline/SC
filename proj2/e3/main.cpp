@@ -4,14 +4,15 @@
 
 #include <sys/types.h>
 #include <sys/ipc.h>
+#include <sys/shm.h>
 
 #include <wait.h>
 #include <math.h>
 #include <stdio.h>
 
 #include "Timer.h"
+#include "Shmarray.h"
 #include "dijkstra.h"
-#include "shmarray.h"
 
 #define C_RED   "\x1B[31m"
 #define C_YEL   "\x1B[33m"
@@ -20,6 +21,7 @@
 
 #define N_CHILD 3
 #define N_LOOP  100
+#define N_MUTEX 2
 
 int child[N_CHILD];
 const char* color[N_CHILD] = {C_RED, C_YEL, C_CYN};
@@ -35,18 +37,22 @@ int getChildIndex(int pid){
 
 int main(){
 
+	Shmarray array;
 	Timer t;
 	t.click();
 
-	int mutex[2]; //e3
+	int cont = 0;
 
-	// E2 - INICIALIZAÇÃO DA MEMÓRIA COMPARTILHADA
-	shmarray_create(IPC_PRIVATE, 2);
-	shmarray_init();
+	array.create(IPC_PRIVATE, 2); 	//e3 - criacao
+	array.init(); //e3 - inicializacao
 
-	// E3 - INICIALIZAÇÃO DO SEMÁFORO
-	mutex[0] = sem_create(IPC_PRIVATE, 1);
-	mutex[1] = sem_create(IPC_PRIVATE, 1);
+	#if N_MUTEX==1
+		int mutex = sem_create(IPC_PRIVATE, 1);
+	#else
+		int mutex[2];
+		mutex[0] = sem_create(IPC_PRIVATE, 1);
+		mutex[1] = sem_create(IPC_PRIVATE, 1);
+	#endif
 
     for(int i=0; i < N_CHILD; i++) {
 
@@ -59,6 +65,7 @@ int main(){
         else if (child[i] == 0){
             Timer tchild;
 		    int pid = getpid();
+			child[i] = pid;
 
 		    srand(pid * (time(NULL)/100));
 
@@ -74,27 +81,41 @@ int main(){
 			    // TEMPO ALEATÓRIO ( entre  5  e  100  ms)
 			    sleepTime = random()%96 + 5; //[0~95]+5
 
-				// E3 - Semaforo
-				P(mutex[0]);				
+				#if N_MUTEX==1
+					P(mutex);
+				#else
+					P(mutex[0]);
+				#endif
 
 				// E2 - rotina
-					int primeira = shmarray_get(0);
-					primeira++;
-					usleep(sleepTime*1000);
-					shmarray_set(0, primeira);
+				int primeira = array.get(0);
+				primeira++;
+				usleep(sleepTime*1000);
+				array.set(0, primeira);
 
-					// E3 - Semaforo
+				#if N_MUTEX==1
+				#else
+					int var1 = array.get(0);
 					V(mutex[0]);
- 
-					usleep(sleepTime*1000); //eu
-					
-					// E3 - Semaforo
-					P(mutex[1]);
-					shmarray_sum(1,-1);
-					V(mutex[1]);
+				#endif					
 
-					usleep(sleepTime*1000);
-				// E2 - fim rotina		
+				usleep(sleepTime*1000); //eu
+				
+				#if N_MUTEX==1
+				#else
+					P(mutex[1]);
+				#endif	
+
+				array.sum(1, -1);
+				
+				#if N_MUTEX==1
+				#else
+					int var2 = array.get(1);
+					V(mutex[1]);
+				#endif		
+
+				usleep(sleepTime*1000);
+				// E2 - fim rotina	
 
 				tchild.clock();
 
@@ -103,8 +124,16 @@ int main(){
 			    intervals[j] = tchild.interval_s();
 
 				// E2 - Ao exibir as informações, acrescenta o valor das variáveis compartilhadas
-				printf ("%s PID: %d, Número: %d, Paço: %3d, sleep time: %3dms, tempo de execucao: %.5fs var1: %3d, var2: %3d\n", color[getChildIndex(pid)], pid, getChildIndex(pid), j, sleepTime, tchild.interval_s(), shmarray_get(0), shmarray_get(1));	
-				printf(C_RESET);	
+				#if N_MUTEX==1
+					printf ("%s PID: %d, Número: %d, Paço: %3d, sleep time: %3dms, tempo de execucao: %.5fs var1: %3d, var2: %3d\n", color[getChildIndex(pid)], pid, getChildIndex(pid), j, sleepTime, tchild.interval_s(), array.get(0), array.get(1));	
+				#else
+					printf ("%s PID: %d, Número: %d, Paço: %3d, sleep time: %3dms, tempo de execucao: %.5fs var1: %3d, var2: %3d\n", color[getChildIndex(pid)], pid, getChildIndex(pid), j, sleepTime, tchild.interval_s(), var1, var2);	
+				#endif	
+				printf(C_RESET);
+				
+				#if N_MUTEX==1
+					V(mutex);	
+				#endif				
 		    }
 
             // E1 - CALCULA O DESVIO PADRÃO
@@ -143,15 +172,19 @@ int main(){
     }
 
 	// E2 - COPIA PARA VARIÁVEL LOCAL
-	int var1 = shmarray_get(0);
-	int var2 = shmarray_get(1);
+	int var1 = array.get(0);
+	int var2 = array.get(1);
 
-	// E2 - LIBRAR SHM
-	shmarray_delete();
+	// E2 - LIBERAR MEMÓRIA COMPARTILHADA
+	array.del();
 
 	// E3 - LIBERAR SEMÁFORO
-	sem_delete(mutex[0]);
-	sem_delete(mutex[1]);
+	#if N_MUTEX==1
+		sem_delete(mutex);
+	#else
+		sem_delete(mutex[0]);
+		sem_delete(mutex[1]);
+	#endif	
 
 	t.clock();
 	

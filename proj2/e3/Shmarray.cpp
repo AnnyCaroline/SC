@@ -1,14 +1,6 @@
-/* Shared Memory int Array */
+#include "Shmarray.h"
 
-#include <sys/shm.h>
-#include <stdio.h>  //perror
-#include <stdlib.h> //exit
-
-int shmid;
-int* array;
-int size;
-
-int shmarray_create(key_t key, int sizeF){
+int Shmarray::create(key_t key, int sizeF){
     size = sizeF;
 
 	shmid = shmget(key, size*sizeof(int), IPC_CREAT | 0600);
@@ -40,14 +32,27 @@ int shmarray_create(key_t key, int sizeF){
 	}
 }
 
-void shmarray_init(){
+void Shmarray::init(){
 	array[0]=0;
 	array[1]=300;
 }
 
-void shmarray_delete(){
-	// E2 - DETACH (DESACOPLAMENTO) NA MEMÓRIA COMPARTILHADA
-	if (shmdt(array) < 0){
+int Shmarray::get(int i){
+    return array[i];
+}
+
+void Shmarray::set(int i, int num){
+    array[i] = num;
+}
+
+void Shmarray::sum(int i, int num){
+    if (i>=0 && i<=size){
+        array[i] = array[i] + num;
+    }
+}
+
+void Shmarray::del(){
+    if (shmdt(array) < 0){
 		perror("Erro no detach\n");
 	};
 
@@ -56,19 +61,3 @@ void shmarray_delete(){
 		perror("Erro ao liberar o segmento de memória compartilhada\n");
 	}
 }
-
-int shmarray_get(int i){
-    return array[i];
-}
-
-void shmarray_set(int i, int num){
-    array[i] = num;
-}
-
-void shmarray_sum(int i, int num){
-    if (i>=0 && i<=size){
-        array[i] = array[i] + num;
-    }
-}
-
-
