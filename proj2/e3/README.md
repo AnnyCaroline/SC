@@ -1,0 +1,7 @@
+# Semáforos
+
+## Compilação
+```
+ $ make
+```
+
