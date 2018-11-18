@@ -167,6 +167,7 @@ int main(){
     // E1 - BARREIRA
     for(int i=0; i < N_CHILD; i++) {
         int pid = msg.receive();
+		printf(C_RESET);
 		printf("\n-------------------------------------\n");
         printf("Filho ");
         printf("%s", color[i]);

@@ -23,7 +23,12 @@ int Msg::receive(){
     struct Msg::msgtext msg;
     int retorno = msgrcv(msqid, &msg, sizeof(int), 0, 0);
 
-    return retorno;
+    if (retorno==-1){
+        perror("msgrcv");
+        exit(1);
+    }else{
+        return msg.pid;
+    }
 }
 
 void Msg::del(){
