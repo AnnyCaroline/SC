@@ -98,7 +98,7 @@ int main(){
     for(int i=0; i < N_CHILD; i++) {
         int pid = wait(NULL);
         printf("Filho ");
-        printf("%s", color[i]);
+        printf("%s", color[getChildIndex(pid)]);
         printf("%d, pid %d", getChildIndex(pid), pid);
         printf(C_RESET);
         printf(" terminou.\n");

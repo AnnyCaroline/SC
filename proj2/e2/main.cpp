@@ -170,7 +170,7 @@ int main(){
         int pid = wait(NULL);
 		printf("\n-------------------------------------\n");
         printf("Filho ");
-        printf("%s", color[i]);
+        printf("%s", color[getChildIndex(pid)]);
         printf("%d, pid %d", getChildIndex(pid), pid);
         printf(C_RESET);
         printf(" terminou.\n");
