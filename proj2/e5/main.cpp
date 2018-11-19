@@ -30,16 +30,14 @@ int child[N_CHILD];
 const char* color[N_CHILD] = {C_RED, C_YEL, C_CYN};
 
 int getChildIndex(int pid){
-	for(int i=0; i < N_CHILD; i++) {
+	for(int i=0; i < N_CHILD; i++){
 		if (child[i] == pid)
 			return i;
 	}
-
 	return -1;
 }
 
 int main(){
-
 	Timer t;
 	t.click();
 
@@ -78,8 +76,8 @@ int main(){
 			child[i] = pid;
 
 			// E5 - muda a prioridade do processo
-			if (getChildIndex(pid) == 2)
-				setpriority(PRIO_PROCESS, getpid(), 19);
+			if (getChildIndex(pid) != 0)
+				setpriority(PRIO_PROCESS, pid, 19);
 
 		    srand(pid * (time(NULL)/100));
 
