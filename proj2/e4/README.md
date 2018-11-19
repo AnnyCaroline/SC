@@ -8,3 +8,6 @@ Agora, cada processo filho, ao final de sua atividade, envia uma mensagem para o
 ```
  $ make
 ```
+
+## Links
+- https://gist.github.com/Mark-htmlgogogo/e024c36541646373581472348657304d
