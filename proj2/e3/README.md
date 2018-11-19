@@ -9,7 +9,7 @@ A primeira utiliza um único semáforo mutex para envolver toda a rotina dos pro
 |-------------------|-------------|---------|----------|---------|---------|
 | etapa 2           | não         | 16,890s | 16.464s  | 17.585s | 16.622s |
 | etapa 3 - 1 mutex | sim         | 49,817s | 49.824s  | 49.590s | 50.036s |
-| etapa 3 - 2 mutex | sim         | 21,456s | 21.561 s | 21.085s | 21.722s |
+| etapa 3 - 2 mutex | sim         | 19,456s | 19.561 s | 19.085s | 19.722s |
 
 ## Compilação
 ```
