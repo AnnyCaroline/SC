@@ -1,8 +1,8 @@
 # Concorrência com Lego Mindstorms EV3
 
-![robo](img/robo1.jpg)
-![robo](img/robo2.jpg)
-![robo](img/tela.jpg)
+![robo1](img/robo1.jpg)
+![robo2](img/robo2.jpg)
+![visor](img/visor.jpg)
 
 Ao iniciar, o robô verifica e salva o valor inicial do sensor de luminosidade. Depois, começa a executar 3 loops:
 
@@ -36,4 +36,4 @@ O robô possui 2 rodas, sensores de toque, som, luminosidade e infravermelho.
 |                      | IN_4: Sensor infravermelho |
 
 ## Vídeos
-- 
+- [playlist](https://www.youtube.com/playlist?list=PL-Vy8N4zUqm7ku3F079IFO2XA9thoRVkX)
