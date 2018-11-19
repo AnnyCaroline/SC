@@ -21,9 +21,9 @@ int sem_create(key_t key, int initval){
         ushort array[1];
     } arg_ctl ;
     
-    semid = semget(ftok("dijkstra.h",key),1,IPC_CREAT|IPC_EXCL|0666);
+    semid = semget(key, 1, IPC_CREAT|IPC_EXCL|0666);
     if (semid == -1) {
-        semid = semget(ftok("dijkstra.h",key),1,0666); 
+        semid = semget(key,1,0666); 
         if (semid == -1) {
             perror("Erro semget()");
             exit(1);
