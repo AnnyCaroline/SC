@@ -1,6 +1,6 @@
 # Lista 1 - Exercitar manualmente as técnicas de programação e verificação de sistemas concorrentes
 
-PDFs:
+## PDFs
 
 - **ex1:** Simulação manual das soluções de Dijkstra e Peterson
 - **ex2:** 
