@@ -3,29 +3,11 @@
   <listLabel>
     <br.uerj.petrinetanalyzer.gui.objects.Label>
       <infEsq>
-        <x>96</x>
-        <y>204</y>
-      </infEsq>
-      <strText>Fil 1</strText>
-      <posicao>0</posicao>
-      <largura>25</largura>
-    </br.uerj.petrinetanalyzer.gui.objects.Label>
-    <br.uerj.petrinetanalyzer.gui.objects.Label>
-      <infEsq>
-        <x>298</x>
-        <y>206</y>
-      </infEsq>
-      <strText>Fil 2</strText>
-      <posicao>1</posicao>
-      <largura>25</largura>
-    </br.uerj.petrinetanalyzer.gui.objects.Label>
-    <br.uerj.petrinetanalyzer.gui.objects.Label>
-      <infEsq>
         <x>35</x>
         <y>172</y>
       </infEsq>
       <strText>PENSA</strText>
-      <posicao>2</posicao>
+      <posicao>0</posicao>
       <largura>25</largura>
     </br.uerj.petrinetanalyzer.gui.objects.Label>
     <br.uerj.petrinetanalyzer.gui.objects.Label>
@@ -34,7 +16,7 @@
         <y>196</y>
       </infEsq>
       <strText>PENSA</strText>
-      <posicao>3</posicao>
+      <posicao>1</posicao>
       <largura>25</largura>
     </br.uerj.petrinetanalyzer.gui.objects.Label>
     <br.uerj.petrinetanalyzer.gui.objects.Label>
@@ -43,7 +25,7 @@
         <y>305</y>
       </infEsq>
       <strText>Pega talheres e come</strText>
-      <posicao>4</posicao>
+      <posicao>2</posicao>
       <largura>100</largura>
     </br.uerj.petrinetanalyzer.gui.objects.Label>
     <br.uerj.petrinetanalyzer.gui.objects.Label>
@@ -52,8 +34,53 @@
         <y>312</y>
       </infEsq>
       <strText>pega talheres e come</strText>
-      <posicao>5</posicao>
+      <posicao>3</posicao>
       <largura>100</largura>
+    </br.uerj.petrinetanalyzer.gui.objects.Label>
+    <br.uerj.petrinetanalyzer.gui.objects.Label>
+      <infEsq>
+        <x>323</x>
+        <y>228</y>
+      </infEsq>
+      <strText>Cont2</strText>
+      <posicao>4</posicao>
+      <largura>25</largura>
+    </br.uerj.petrinetanalyzer.gui.objects.Label>
+    <br.uerj.petrinetanalyzer.gui.objects.Label>
+      <infEsq>
+        <x>124</x>
+        <y>226</y>
+      </infEsq>
+      <strText>Cont1</strText>
+      <posicao>5</posicao>
+      <largura>25</largura>
+    </br.uerj.petrinetanalyzer.gui.objects.Label>
+    <br.uerj.petrinetanalyzer.gui.objects.Label>
+      <infEsq>
+        <x>118</x>
+        <y>400</y>
+      </infEsq>
+      <strText>Acu1</strText>
+      <posicao>6</posicao>
+      <largura>20</largura>
+    </br.uerj.petrinetanalyzer.gui.objects.Label>
+    <br.uerj.petrinetanalyzer.gui.objects.Label>
+      <infEsq>
+        <x>316</x>
+        <y>398</y>
+      </infEsq>
+      <strText>Acu2</strText>
+      <posicao>7</posicao>
+      <largura>20</largura>
+    </br.uerj.petrinetanalyzer.gui.objects.Label>
+    <br.uerj.petrinetanalyzer.gui.objects.Label>
+      <infEsq>
+        <x>207</x>
+        <y>462</y>
+      </infEsq>
+      <strText>reset</strText>
+      <posicao>8</posicao>
+      <largura>25</largura>
     </br.uerj.petrinetanalyzer.gui.objects.Label>
   </listLabel>
   <nome>5_ideiaStarvation.xml</nome>
@@ -61,7 +88,7 @@
     <br.uerj.petrinetanalyzer.gui.objects.PlaceGraph>
       <x>105</x>
       <y>224</y>
-      <nome>P0</nome>
+      <nome>Cont1</nome>
       <posicao>0</posicao>
       <fichas>3</fichas>
       <identificador>P0</identificador>
@@ -69,7 +96,7 @@
     <br.uerj.petrinetanalyzer.gui.objects.PlaceGraph>
       <x>305</x>
       <y>229</y>
-      <nome>P1</nome>
+      <nome>Cont2</nome>
       <posicao>1</posicao>
       <fichas>3</fichas>
       <identificador>P1</identificador>
@@ -121,14 +148,6 @@
       <posicao>7</posicao>
       <fichas>0</fichas>
       <identificador>P7</identificador>
-    </br.uerj.petrinetanalyzer.gui.objects.PlaceGraph>
-    <br.uerj.petrinetanalyzer.gui.objects.PlaceGraph>
-      <x>187</x>
-      <y>507</y>
-      <nome>P8</nome>
-      <posicao>8</posicao>
-      <fichas>0</fichas>
-      <identificador>P8</identificador>
     </br.uerj.petrinetanalyzer.gui.objects.PlaceGraph>
   </listLugar>
   <listTransicao>
@@ -182,17 +201,6 @@
       <nome>T4</nome>
       <posicao>4</posicao>
       <identificador>T4</identificador>
-      <seft>0.0</seft>
-      <slft>0.0</slft>
-      <curvaDensidade>0</curvaDensidade>
-    </br.uerj.petrinetanalyzer.gui.objects.TransitionGraph>
-    <br.uerj.petrinetanalyzer.gui.objects.TransitionGraph>
-      <orientation>3</orientation>
-      <x>509</x>
-      <y>323</y>
-      <nome>T5</nome>
-      <posicao>5</posicao>
-      <identificador>T5</identificador>
       <seft>0.0</seft>
       <slft>0.0</slft>
       <curvaDensidade>0</curvaDensidade>
@@ -371,31 +379,13 @@
           <y>209</y>
         </java.awt.Point>
       </listPoint>
-      <selectedPoint reference="../listPoint/java.awt.Point[2]"/>
+      <selectedPoint reference="../listPoint/java.awt.Point[3]"/>
       <extreme>1</extreme>
       <peso>1</peso>
       <ehEntrada>false</ehEntrada>
       <posicao>8</posicao>
       <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[6]"/>
       <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[4]"/>
-    </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
-    <br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
-      <listPoint>
-        <java.awt.Point>
-          <x>393</x>
-          <y>209</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>303</x>
-          <y>259</y>
-        </java.awt.Point>
-      </listPoint>
-      <extreme>1</extreme>
-      <peso>1</peso>
-      <ehEntrada>true</ehEntrada>
-      <posicao>9</posicao>
-      <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[6]"/>
-      <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[2]"/>
     </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
     <br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
       <listPoint>
@@ -411,7 +401,7 @@
       <extreme>0</extreme>
       <peso>1</peso>
       <ehEntrada>false</ehEntrada>
-      <posicao>10</posicao>
+      <posicao>9</posicao>
       <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[7]"/>
       <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[3]"/>
     </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
@@ -429,7 +419,7 @@
       <extreme>0</extreme>
       <peso>1</peso>
       <ehEntrada>false</ehEntrada>
-      <posicao>11</posicao>
+      <posicao>10</posicao>
       <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[8]"/>
       <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[4]"/>
     </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
@@ -447,7 +437,7 @@
       <extreme>1</extreme>
       <peso>3</peso>
       <ehEntrada>true</ehEntrada>
-      <posicao>12</posicao>
+      <posicao>11</posicao>
       <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[7]"/>
       <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[5]"/>
     </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
@@ -465,7 +455,7 @@
       <extreme>1</extreme>
       <peso>3</peso>
       <ehEntrada>true</ehEntrada>
-      <posicao>13</posicao>
+      <posicao>12</posicao>
       <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[8]"/>
       <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[5]"/>
     </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
@@ -476,100 +466,86 @@
           <y>464</y>
         </java.awt.Point>
         <java.awt.Point>
-          <x>187</x>
-          <y>495</y>
+          <x>182</x>
+          <y>504</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>429</x>
+          <y>445</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>496</x>
+          <y>162</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>105</x>
+          <y>162</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>105</x>
+          <y>212</y>
         </java.awt.Point>
       </listPoint>
+      <selectedPoint reference="../listPoint/java.awt.Point[2]"/>
       <extreme>0</extreme>
-      <peso>1</peso>
+      <peso>3</peso>
       <ehEntrada>false</ehEntrada>
-      <posicao>14</posicao>
-      <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[9]"/>
+      <posicao>13</posicao>
+      <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph"/>
       <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[5]"/>
     </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
     <br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
       <listPoint>
         <java.awt.Point>
-          <x>187</x>
-          <y>495</y>
+          <x>393</x>
+          <y>209</y>
         </java.awt.Point>
         <java.awt.Point>
-          <x>501</x>
-          <y>469</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>509</x>
-          <y>323</y>
+          <x>303</x>
+          <y>259</y>
         </java.awt.Point>
       </listPoint>
-      <extreme>0</extreme>
+      <extreme>1</extreme>
       <peso>1</peso>
       <ehEntrada>true</ehEntrada>
+      <posicao>14</posicao>
+      <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[6]"/>
+      <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[2]"/>
+    </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
+    <br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
+      <listPoint>
+        <java.awt.Point>
+          <x>188</x>
+          <y>464</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>191</x>
+          <y>489</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>418</x>
+          <y>435</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>484</x>
+          <y>171</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>306</x>
+          <y>171</y>
+        </java.awt.Point>
+        <java.awt.Point>
+          <x>305</x>
+          <y>217</y>
+        </java.awt.Point>
+      </listPoint>
+      <selectedPoint reference="../listPoint/java.awt.Point[2]"/>
+      <extreme>0</extreme>
+      <peso>3</peso>
+      <ehEntrada>false</ehEntrada>
       <posicao>15</posicao>
-      <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[9]"/>
-      <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[6]"/>
-    </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
-    <br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
-      <listPoint>
-        <java.awt.Point>
-          <x>509</x>
-          <y>323</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>521</x>
-          <y>155</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>264</x>
-          <y>178</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>267</x>
-          <y>228</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>293</x>
-          <y>229</y>
-        </java.awt.Point>
-      </listPoint>
-      <selectedPoint reference="../listPoint/java.awt.Point[3]"/>
-      <extreme>3</extreme>
-      <peso>3</peso>
-      <ehEntrada>false</ehEntrada>
-      <posicao>16</posicao>
       <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph[2]"/>
-      <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[6]"/>
-    </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
-    <br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
-      <listPoint>
-        <java.awt.Point>
-          <x>509</x>
-          <y>323</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>543</x>
-          <y>146</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>153</x>
-          <y>153</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>153</x>
-          <y>224</y>
-        </java.awt.Point>
-        <java.awt.Point>
-          <x>117</x>
-          <y>224</y>
-        </java.awt.Point>
-      </listPoint>
-      <selectedPoint reference="../listPoint/java.awt.Point[4]"/>
-      <extreme>2</extreme>
-      <peso>3</peso>
-      <ehEntrada>false</ehEntrada>
-      <posicao>17</posicao>
-      <lugar class="br.uerj.petrinetanalyzer.gui.objects.PlaceGraph" reference="../../../listLugar/br.uerj.petrinetanalyzer.gui.objects.PlaceGraph"/>
-      <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[6]"/>
+      <transicao class="br.uerj.petrinetanalyzer.gui.objects.TransitionGraph" reference="../../../listTransicao/br.uerj.petrinetanalyzer.gui.objects.TransitionGraph[5]"/>
     </br.uerj.petrinetanalyzer.gui.objects.ArcGraph>
   </listArco>
   <matrizEntrada>
