@@ -12,7 +12,7 @@ class Msg {
     private:
         int msqid;
         struct msgtext {
-            long mtype = 1;
+            long mtype;
             int pid;
         };                 
 

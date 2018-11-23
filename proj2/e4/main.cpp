@@ -10,6 +10,8 @@
 #include <math.h>
 #include <stdio.h>
 
+#include "time.h"
+
 #include "Timer.h"
 #include "Shmarray.h"
 #include "Msg.h"

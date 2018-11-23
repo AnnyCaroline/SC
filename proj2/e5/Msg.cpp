@@ -11,6 +11,7 @@ void Msg::create(key_t key){
 
 void Msg::send(int pid_f){
     struct Msg::msgtext msg;
+    msg.mtype=1;
     msg.pid = pid_f;
     int retorno = msgsnd(msqid, &msg, sizeof(int), 0);
 
@@ -32,6 +33,7 @@ void Msg::send(int pid_f){
 
 int Msg::receive(){
     struct Msg::msgtext msg;
+    msg.mtype = 1;
     int retorno = msgrcv(msqid, &msg, sizeof(int), 0, 0);
 
     /*Ela recebe cinco parâmetros:

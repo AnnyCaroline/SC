@@ -10,6 +10,7 @@
 #include <math.h>
 #include <stdio.h>
 
+#include "time.h"
 #include "Timer.h"
 
 #define C_RED   "\x1B[31m"

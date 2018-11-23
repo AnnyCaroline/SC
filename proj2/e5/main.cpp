@@ -4,13 +4,15 @@
 
 #include <sys/types.h>
 #include <sys/ipc.h>
-#include <sys/shm.h>
+
 
 #include <wait.h>
 #include <math.h>
 #include <stdio.h>
 
 #include <sys/resource.h>
+
+#include "time.h"
 
 #include "Timer.h"
 #include "Shmarray.h"

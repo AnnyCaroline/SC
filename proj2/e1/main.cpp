@@ -69,8 +69,9 @@ int main(){
 			    media += tchild.interval_s()/N_LOOP;
 			    intervals[j] = tchild.interval_s();
 
-			    printf ("%s PID: %d, Número: %d, Paço: %d, sleep time: %dms, tempo de execucao: %.5fs C_RESET\n", color[getChildIndex(pid)], pid, getChildIndex(pid), j, sleepTime,tchild.interval_s());
+			    printf ("%sPID: %5d, Número: %1d, Paço: %2d, sleep time: %3dms, tempo de execucao: %.5fs\n"C_RESET, color[getChildIndex(pid)], pid, getChildIndex(pid), j, sleepTime,tchild.interval_s());
 		    }
+
 
             //CALCULA O DESVIO PADRÃO
             for (int j=0; j<N_LOOP; j++)
