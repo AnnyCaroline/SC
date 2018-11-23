@@ -1,5 +1,4 @@
 #include "Timer.h"
-#include <sys/time.h>
 
 void Timer::click(){
 	gettimeofday(&tv, NULL);

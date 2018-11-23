@@ -5,6 +5,7 @@
 #include <wait.h>
 #include <math.h>
 #include <stdio.h>
+#include <time.h>
 
 #include "Timer.h"
 
