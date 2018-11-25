@@ -69,7 +69,7 @@ int main(){
 			    media += tchild.interval_s()/N_LOOP;
 			    intervals[j] = tchild.interval_s();
 
-			    printf ("%sPID: %5d, Número: %1d, Paço: %2d, sleep time: %3dms, tempo de execucao: %.5fs\n"C_RESET, color[getChildIndex(pid)], pid, getChildIndex(pid), j, sleepTime,tchild.interval_s());
+			    printf ("%s PID: %5d, Número: %1d, Paço: %2d, sleep time: %3dms, tempo de execucao: %.5fs\n" C_RESET, color[getChildIndex(pid)], pid, getChildIndex(pid), j, sleepTime, tchild.interval_s());
 		    }
 
 
@@ -81,8 +81,8 @@ int main(){
 
             //EXIBE O TEMPO MÉDIO E O DESVIO PADRÃO
             printf("%s", color[getChildIndex(pid)]);
-            printf("PID: %d, Tempo gasto médio: %.5f ms\n", pid, media);
-            printf("PID: %d, Desvio padrao: %.5f\n", pid, desvioPadrao);	
+            printf(" PID: %d, Tempo gasto médio: %.5f ms\n", pid, media);
+            printf(" PID: %d, Desvio padrao: %.5f\n", pid, desvioPadrao);	
             printf(C_RESET);	
 
             //TERMINA O FILHO
@@ -99,7 +99,7 @@ int main(){
     //BARREIRA
     for(int i=0; i < N_CHILD; i++) {
         int pid = wait(NULL);
-        printf("Filho ");
+        printf(" Filho ");
         printf("%s", color[getChildIndex(pid)]);
         printf("%d, pid %d", getChildIndex(pid), pid);
         printf(C_RESET);
@@ -107,7 +107,7 @@ int main(){
     }
 
 	t.clock();
-	printf("Todos os  filhos terminaram. Processamento teve a duração de %.5f s\n", t.interval_s());
+	printf(" Todos os  filhos terminaram. Processamento teve a duração de %.5f s\n", t.interval_s());
 
 	return 0;
 }
