@@ -78,7 +78,6 @@ int main(){
         else if (child[i] == 0){
             Timer tchild;
 		    int pid = getpid();
-			child[i] = pid;
 
 			// E5 - muda a prioridade do processo
 			if (getChildIndex(pid) != 0)
