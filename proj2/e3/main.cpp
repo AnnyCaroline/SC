@@ -67,6 +67,14 @@ int main(){
         else if (child[i] == 0){
             Timer tchild;
 		    int pid = getpid();
+			child[i] = pid;
+			/*
+				faz com que o filho armazene seu pid no array de PIDs "child".
+				Esse array é usado na função getChildIndex.
+				No processo pai, o retorno do fork é armazenado nesse array, 
+					mas o processo filho recém-criado recebe um array sem esse retorno.
+			*/
+
 
 		    srand(pid * (time(NULL)/100));
 
