@@ -77,7 +77,10 @@ int main(){
 
 	if (array == (int *) -1){
 		perror("shmat");
-		//ToDo destruir shm
+		//destruir shm
+		if (shmctl(shmid, IPC_RMID, NULL) == -1){
+			perror("Erro ao liberar o segmento de memória compartilhada\n");
+		}		
 		exit(1);
 	}	
 
