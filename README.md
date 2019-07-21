@@ -1,7 +1,7 @@
-# Sistemas Concorrentes
+<img src="https://uploaddeimagens.com.br/images/001/739/674/full/logo_uerj_pb.png?1542844091" width="130" style="margin-top:30px;" align="left"/>
 
-- Programa de Pós-Graduação em Engenharia Eletrônica - PEL
-- Prof. Alexandre Sztajberg
-- 2018.2
-- [Disciplina no ead](https://ead.uerj.br/ava/course/view.php?id=155)
-- [Projeto de programação 2](https://ead.uerj.br/ava/pluginfile.php/14316/mod_resource/content/0/scd-20161-proj2.pdf)
+# Sistemas concorrentes
+
+**UERJ - Universidade do Estado do Rio de Janeiro**  
+**FEN/PEL - DICC/IME - CComp/IME**  
+**2018/2 - Prof. Alexandre Sztajnberg**
