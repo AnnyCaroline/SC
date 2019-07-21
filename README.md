@@ -14,3 +14,4 @@
 - [Simulador de Rede de Petri JSARP](https://github.com/felipelino/jsarp)
 - [Livro Concurrency](http://www.doc.ic.ac.uk/~jnm/book/)
 - [Dicas IPC](https://www.ime.uerj.br/~alexszt/dicas-ipc/)
+- [Sistemas Operacionais Modernos - Tanenbaum](https://drive.google.com/file/d/1bZILuXGHQHFmDCbQTw5DKCqr4rcS8nyZ/view?usp=sharing)
