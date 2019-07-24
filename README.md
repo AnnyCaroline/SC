@@ -6,14 +6,6 @@
 **FEN/PEL - DICC/IME - CComp/IME**  
 **2018/2 - Prof. Alexandre Sztajnberg**
 
-## Notas
-
-| P1   | Sock prog | Sock artig | RPC/RMI | Site | Aval SBrt | Semin      | Nota Semin | Média |
-|------|-----------|------------|---------|------|-----------|------------|------------|-------|
-| xxxx | 10.0      | 10.0       | xxxx    | xxxx | 9.0       | API Google | 10.0       | 9,9   |
-
-Média = ((P1 * 4) + (Sock prog * 3) + (Sock artig * 2) + (RPC/RMI * 3) + (Site * 1) + (Aval SBrT * 1) + (Semin * 3)) / 17
-
 ## Links externos
 
 - [Página IME](https://www.ime.uerj.br/~alexszt/)
